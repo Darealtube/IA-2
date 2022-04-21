@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<head>
+  <title>IA 2</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Helvetica", "Arial", sans-serif;
+    height: 100vh;
+    background-image: url(./assets/gradient\ 1.png);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .appbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background: rgb(242, 219, 202);
+    background: linear-gradient(
+      90deg,
+      rgba(242, 219, 202, 1) 0%,
+      rgba(232, 55, 55, 1) 96%
+    );
+    color: #fff7f1;
+    z-index: 9999;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 24%;
+  }
+
+  .summary {
+    color: #fff7f1;
+    height: 100%;
+    padding: 32px;
+  }
+
+  .management {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 160px;
+    padding-right: 160px;
+    height: 100vh;
+    background-image: url(./assets/whitebg.png);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .organization {
+    color: #fff7f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 100vh;
+  }
+
+  #logo {
+    animation: spin 3s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .menulink {
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .menulink::after {
+    content: "";
+    background: red;
+    mix-blend-mode: color;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .menulink:hover::after {
+    height: calc(100% + 8px);
+  }
+</style>
+
+<body>
+  <div>
+    <div class="appbar">
+      <a
+        href="https://darealtube.github.io/Emp-Tech-IA/"
+        title="Return to Homepage"
+      >
+        <img
+          src="./assets/logo.png"
+          height="60px"
+          width="180px"
+          style="margin: 32px"
+        />
+      </a>
+      <span style="flex-grow: 1"></span>
+      <div class="menu" style="margin: 48px">
+        <a href="./index.html" class="menulink">Home</a>
+        <a href="./plans.html" class="menulink">Plans</a>
+        <a href="./bio.html" class="menulink" title="To Biology">Other</a>
+      </div>
+    </div>
+    <div class="summary" id="summary">
+      <h1 style="font-size: 10vmin">Executive Summary</h1>
+
+      <h4>
+        Maroyaka offers a unique touch to the classic snack go-to of the people.
+        Desserts such as cupcakes, cheesecakes, graham balls, and cookies can
+        blissfully satisfy target potential customers’ cravings by providing
+        them easy access to these sweet delicacies that can be bought at a fair
+        price. Most Filipinos have a sweet tooth and at most family gatherings,
+        sweet delicacies must be on the table. Data based on Filipinos’ Google
+        searches showed that since the pandemic started in the country,
+        Filipinos’ sweet cravings have intensified. One reason is that the
+        pandemic has limited people’s outdoor activities in which they couldn’t
+        buy foods that they want to eat unless they have stocks in their house.
+        This heightened interest in sweets and pastries among Filipinos led to
+        an increase in the number of food trends and the number of people
+        resorting to online selling which includes baked goods.
+        <br /><br />
+        Many entrepreneurs including the younger ones have imparted their baking
+        skills and experiences to make money from their passion. However, some
+        of these entrepreneurs are not able to meet such customers’ demands due
+        to their products’ price and quality. In accordance with this, young
+        entrepreneurs at Pasig City Science High School came up with the idea of
+        opening a small business in which they can use their passion and skills
+        for baking in carefully and delightedly crafts luscious pastries and
+        cakes. Our primary strategy is to focus on utilizing social media reach
+        on different platforms such as Facebook, Twitter, Instagram, and TikTok.
+        The continuous increase in popularity of different social media
+        platforms can be the right way to promote the starting small business of
+        Sucre Jar Company. Maroyaka. Through social media platforms, target
+        potential customers could turn into buyers by means of sharing updates,
+        reviews, and other relevant information related to product offerings.
+        Moreover, sending news and updates through email addresses customer
+        provides will be one of the marketing strategies the company is planning
+        to utilize. A web page will be used as well to host ordering and buying
+        our products online. Customers have an option to pick up their orders or
+        have it delivered to the comfort of their homes through their preferred
+        courier including the Grab Express, Lalamove, and Mr. Speedy.
+        <br /><br />
+        Overall, Maroyaka has a number of competitive features and the fact that
+        we offer a unique touch to the classic snack go-to of the people. Also,
+        the recipe is crafted to fit the general likings of the masses by still
+        being able to show the character of the company through the taste and
+        aesthetics. Lastly, Maroyaka offers a significant price decrease while
+        maintaining and surpassing the qualities of a good product through the
+        efficient use of the materials and ingredients the company wields.
+        Initial capitalization for the business is Php 10,911.00
+      </h4>
+    </div>
+
+    <div class="management" id="management">
+      <h1>Management and Organization</h1>
+      <img
+        src="./assets/logo2.png"
+        width="400"
+        height="400"
+        style="margin-top: 32px; margin-bottom: 32px; border-radius: 50%"
+        id="logo"
+      />
+
+      <h1>Sucre Jar</h1>
+      <h2>1815 Kalawakan St., Karangalan Village, Manggahan, Pasig City</h2>
+    </div>
+
+    <div id="contact" style="line-height: 0">
+      <img src="./assets/missvis.png" width="100%" height="100%" />
+    </div>
+
+    <div id="contact" style="line-height: 0">
+      <img src="./assets/contacts.png" width="100%" height="100%" />
+    </div>
+
+    <div id="contact" style="line-height: 0">
+      <img src="./assets/orgchart.png" width="100%" height="100%" />
+    </div>
+
+    <div class="organization" id="organization">
+      <h1>Ownership</h1>
+      <h2>Partnership</h2>
+
+      <h1>Capital</h1>
+      <h2>₱ 10,911.00</h2>
+
+      <h1>Compensation and Incentives:</h1>
+      <h2>Minimum wage based on daily rate as provided by law.</h2>
+
+      <h1>External Management Support:</h1>
+      <h2>
+        Our company's Chief Operating and Chief Financial Officers will serve as
+        the Advisory Council
+      </h2>
+    </div>
+  </div>
+</body>

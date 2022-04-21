@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+
+<head>
+  <title>IA 2 | Plans</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Helvetica", "Arial", sans-serif;
+    height: 100vh;
+    background-image: url(./assets/gradient\ 2.png);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .appbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background: rgb(242, 219, 202);
+    background: linear-gradient(
+      90deg,
+      rgba(242, 219, 202, 1) 0%,
+      rgba(232, 55, 55, 1) 96%
+    );
+    color: #fff7f1;
+    z-index: 9999;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 24%;
+  }
+
+  .plan {
+    padding-right: 160px;
+    padding-left: 160px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 120px;
+    color: #fff7f1;
+  }
+
+  .image {
+    float: left;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    margin-right: 32px;
+    transition: all 0.5s;
+  }
+
+  .image:hover {
+    transform: scale(1.1);
+    margin-right: 64px;
+  }
+
+  .materials {
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff7f1;
+    background-image: url(./assets/bg1.png);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .materialTable {
+    font-size: large;
+    color: #f74049;
+    background-image: url(./assets/whitebg.png);
+    background-size: cover;
+    border: 8px solid #f74049;
+    border-radius: 8%;
+  }
+
+  .materialTable td {
+    border: 2px solid #f74049;
+    transition: all 0.5s;
+  }
+
+  .process {
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .processBox {
+    background-image: url(./assets/whitebg.png);
+    background-size: cover;
+    border-radius: 48px;
+    box-shadow: 5px 5px 28px #8d8d8d, -5px -5px 28px #ffffff;
+    width: 50%;
+    color: #f74049;
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .smores {
+    background-image: url(./assets/plans/smores.jpg);
+  }
+
+  .graham {
+    background-image: url(./assets/plans/graham.jpg);
+  }
+
+  .float {
+    background-image: url(./assets/plans/float.jpg);
+  }
+
+  .cookies {
+    background-image: url(./assets/plans/cookies.jpg);
+  }
+
+  .cupcakes {
+    background-image: url(./assets/plans/cupcakes.jpg);
+  }
+
+  .menulink {
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .menulink::after {
+    content: "";
+    background: red;
+    mix-blend-mode: color;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .menulink:hover::after {
+    height: calc(100% + 8px);
+  }
+
+  .materialTable td:hover {
+    color: #fff7f1;
+    background-color: #f74049;
+  }
+</style>
+
+<body>
+  <div>
+    <div class="appbar">
+      <a
+        href="https://darealtube.github.io/Emp-Tech-IA/"
+        title="Return to Homepage"
+      >
+        <img
+          src="./assets/logo.png"
+          height="60px"
+          width="180px"
+          style="margin: 32px"
+        />
+      </a>
+      <span style="flex-grow: 1"></span>
+      <div class="menu" style="margin: 48px">
+        <a href="./index.html" class="menulink">Home</a>
+        <a href="./plans.html" class="menulink">Plans</a>
+        <a href="./bio.html" class="menulink" title="To Biology">Other</a>
+      </div>
+    </div>
+
+    <div class="plan" id="product">
+      <img src="./assets/cupcake.jpg" width="400" height="400" class="image" />
+      <div>
+        <h2>Purpose of the Product/Service</h2>
+        <h4>
+          Maroyaka is looking forward to breaking the association of pastries to
+          being expensive and rightfully bring down the prices in the pastry
+          industry. This will allow “pastry wanters” to become “pastry havers.”
+          Offering an affordable product in the market will let customers have a
+          wider variety of delicacies they like and afford. As of now, Maroyaka
+          offers 5 different products and is checking out the possibility of
+          expanding their list of products.
+        </h4>
+      </div>
+    </div>
+
+    <div class="plan" id="feature">
+      <img src="./assets/cupcake2.jpg" width="400" height="400" class="image" />
+      <div>
+        <h2>Product’s Unique Features</h2>
+        <h4>
+          Maroyaka approaches the pastry industry with two unique features.
+          First will be their recipe for their following products which were
+          developed for years of continued practice and flourishing by their
+          bakers, separating their product’s identity from the rest of its
+          competitors. Design-wise, the bakers from Maroyaka honed their
+          artistry along with their baking abilities. Thus, the products
+          Maroyaka presents have their own charm and attractiveness that matches
+          none. Second, the capability of the company to micromanage their
+          resources that results in their products having a noteworthy cut in
+          price. The cut in price allows a significant difference when compared
+          with their leading competitors
+        </h4>
+      </div>
+    </div>
+
+    <div class="materials" id="materials">
+      <h1>Material Requirements and Sources of Supply</h1>
+      <h4>
+        The materials needed and their respective sources of supply are as
+        follows;
+      </h4>
+      <table
+        align="center"
+        width="100%"
+        class="materialTable"
+        cellpadding="32px"
+      >
+        <tr align="center">
+          <td><h1>Materials</h1></td>
+          <td><h1>Source</h1></td>
+        </tr>
+
+        <tr align="center" bgcolor="#f74049" style="color: #fff7f1">
+          <td colspan="2"><h4>Packaging</h4></td>
+        </tr>
+
+        <tr align="center">
+          <td>Cupcake Packaging (2, 4, and 6 pcs)</td>
+          <td>Facebook Marketplace Seller</td>
+        </tr>
+
+        <tr align="center">
+          <td>S’mores Packaging (6, 8, and 12 pcs)</td>
+          <td>Facebook Marketplace Seller</td>
+        </tr>
+
+        <tr align="center">
+          <td>Graham Balls Packaging (6, 10, and 18 pcs)</td>
+          <td>Facebook Marketplace Seller</td>
+        </tr>
+
+        <tr align="center">
+          <td>Float Cups (12, 16, and 22 oz)</td>
+          <td>Gagmax Packaging Solutions</td>
+        </tr>
+
+        <tr align="center">
+          <td>Cookies Packaging (6, 9, and 12 pcs)</td>
+          <td>Pasig MegaMarket</td>
+        </tr>
+
+        <tr align="center" bgcolor="#f74049" style="color: #fff7f1">
+          <td colspan="2"><h4>Ingredients</h4></td>
+        </tr>
+
+        <tr align="center">
+          <td>Cupcake</td>
+          <td>SM Supermarket</td>
+        </tr>
+
+        <tr align="center">
+          <td>S’mores</td>
+          <td>SM Supermarket</td>
+        </tr>
+
+        <tr align="center">
+          <td>Graham Balls</td>
+          <td>SM Supermarket</td>
+        </tr>
+
+        <tr align="center">
+          <td>Float</td>
+          <td>SM Supermarket</td>
+        </tr>
+
+        <tr align="center">
+          <td>Cookies</td>
+          <td>SM Supermarket</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="process" id="process">
+      <h1 style="color: #fff7f1; margin-bottom: 32px">
+        Process and equipment that will be used to manufacture the
+        product/render the service
+      </h1>
+
+      <div class="recipe cupcakes">
+        <div class="processBox">
+          <center>
+            <h1>Chocolate Cupcake Process</h1>
+          </center>
+
+          <ol>
+            <li>
+              Mix Dry Ingredients
+              <ol type="a">
+                <li>
+                  Sift together 1 ½ cups of all-purpose flour, 1 ⅓ cups of
+                  granulated sugar, ¼ cup of cocoa powder, ½ tsp of salt, and 1
+                  tsp of baking soda.
+                </li>
+                <li>Whisk together until fully combined</li>
+              </ol>
+            </li>
+            <li>
+              Make the buttermilk (if not available)
+              <ol type="a">
+                <li>Combine ½ cup of milk and 1 tbsp of vinegar</li>
+                <li>Stir the mixture and set aside for later</li>
+              </ol>
+            </li>
+
+            <li>
+              Mix the wet ingredients
+              <ol type="a">
+                <li>
+                  In a different bowl whisk together 2 medium eggs, ¼ cup of
+                  sour cream, ⅓ cup of vegetable oil, ½ cup of the buttermilk
+                  mixture, ¼ cup of hot coffee, and 2 tsp vanilla extract.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Add the wet mixture to the dry mixture and combine using a mixer
+              or a whisk.
+              <ol type="a">
+                <li>
+                  Stir for a minute to activate some of the gluten in the flour
+                  and until there are no lumps left
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Preparation for baking
+              <ol type="a">
+                <li>Line the muffin pan with cupcake liners</li>
+                <li>
+                  Scoop 1 tbsp of the chocolate batter into each liner or until
+                  ⅓ of the liner
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Baking
+              <ol type="a">
+                <li>
+                  Bake in the oven at 176°C for 25 minutes or until the centers
+                  are springy and set.
+                </li>
+                <li>Set aside and let the cupcakes cool.</li>
+              </ol>
+            </li>
+
+            <li>
+              Prepare the chocolate buttercream frosting
+              <ol type="a">
+                <li>
+                  Cream 1 ½ cups of room temperature unsalted butter using a
+                  mixer, a whisk, or a spatula.
+                </li>
+                <li>Sift a ⅓ cup of cocoa powder into the butter and mix.</li>
+                <li>Add ½ tsp of salt while mixing</li>
+                <li>In a different bowl, sift 3 cups of powdered sugar.</li>
+                <li>
+                  Gradually add a cup of powdered sugar into the buttercream
+                  mixture until the sugar is incorporated more.
+                </li>
+                <li>
+                  Add ½ tsp of vanilla extract and 2 tsp of lukewarm coffee
+                  while mixing
+                </li>
+                <li>Add a bit of salt and coffee if needed.</li>
+                <li>
+                  Add in 1 tbsp of cream and until everything is fully combined.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Decorate the cupcakes
+              <ol type="a">
+                <li>
+                  Transfer an ample amount of buttercream into a piping bag
+                </li>
+                <li>
+                  Pipe the frosting on the chocolate cupcakes in a swirling
+                  motion or what fits best to the baker’s preference.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Chill the cupcakes in the refrigerator to avoid the buttercream
+              frosting from melting.
+            </li>
+          </ol>
+        </div>
+
+        <div class="processBox">
+          <center>
+            <h1>Red Velvet and Cream Cheese Cupcakes</h1>
+          </center>
+
+          <ol>
+            <li>
+              Mix Dry Ingredients
+              <ol type="a">
+                <li>
+                  In one bowl, sift together 1 ⅔ cups of all-purpose flour, ¼
+                  heaping tsp of baking soda, 1 tsp of baking powder, ¼ heaping
+                  tsp of salt, 1 cup of granulated sugar, and 2 tsp of cocoa
+                  powder.
+                </li>
+                <li>Whisk together and set aside.</li>
+              </ol>
+            </li>
+            <li>
+              Make the buttermilk (if not available)
+              <ol type="a">
+                <li>
+                  Combine ¾ cup of milk and less than a tablespoon of vinegar
+                </li>
+                <li>Stir the mixture and set aside for later</li>
+              </ol>
+            </li>
+
+            <li>
+              Mix the wet ingredients
+              <ol type="a">
+                <li>Mix 3 room temperature eggs, ¾ cups of buttermilk</li>
+                <li>Add in 2 tsp of vanilla extract then mix</li>
+                <li>
+                  Add 3 drops of red food coloring and whisk until the color
+                  incorporates with the batter.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Use the reverse creaming method with the dry ingredients
+              <ol type="a">
+                <li>
+                  Cut ¾ cups of room temperature unsalted butter and mix with
+                  the dry mixture
+                </li>
+                <li>Resulting mixture must have a wet sandy texture</li>
+              </ol>
+            </li>
+
+            <li>
+              Mix the wet mixture with the dry mixture
+              <ol type="a">
+                <li>
+                  Gradually add half of the wet mixture into the dry mixture
+                  until fully combined.
+                </li>
+                <li>Add ¼ of the remaining half of the wet mixture and mix.</li>
+                <li>Add in the rest of the mixture and mix well.</li>
+                <li>
+                  Scrape down the sides of the bowl and add more food coloring
+                  if needed.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Preparation for baking
+              <ol type="a">
+                <li>Line the muffin pan with cupcake liners</li>
+                <li>Scoop an ample amount of the mixture to each liner.</li>
+              </ol>
+            </li>
+
+            <li>
+              Baking
+              <ol type="a">
+                <li>Bake in the oven at 176°C for 15-20 minutes.</li>
+                <li>
+                  Switch the muffin pan halfway through to get a nice even bake.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Prepare the cream cheese frosting
+              <ol type="a">
+                <li>In a bowl, sift 2 ¾ cups of confectioners sugar</li>
+                <li>
+                  In a different bowl, cream 1 ½ cups of room temperature butter
+                </li>
+                <li>
+                  Add a pinch of salt and 16 oz of room temperature cream cheese
+                  to the butter mixture and mix well.
+                </li>
+                <li>
+                  After mixing, add 1 tsp of vanilla extract then cream the
+                  frosting.
+                </li>
+                <li>
+                  Gradually add a cup of confectioner's sugar a time and let it
+                  incorporate with the mixture.
+                </li>
+                <li>
+                  Add more sugar if the mixture is too runny to firm it up.
+                </li>
+                <li>Add a bit of salt if needed.</li>
+              </ol>
+            </li>
+
+            <li>
+              Decorate the cupcakes
+              <ol type="a">
+                <li>
+                  Grate a little bit of a cupcake to produce crumbs for garnish.
+                  (optional)
+                </li>
+                <li>
+                  Transfer an ample amount of cream cheese frosting into the
+                  piping bag.
+                </li>
+                <li>
+                  Pipe the frosting on the red velvet cupcakes in a swirling
+                  motion or what fits best to the baker’s preference.
+                </li>
+                <li>Sprinkle the crumbs on top of the frosting.</li>
+              </ol>
+            </li>
+
+            <li>Chill the cupcakes in the refrigerator.</li>
+          </ol>
+        </div>
+
+        <div class="processBox">
+          <center>
+            <h1>Blueberry Cheesecake Cupcakes</h1>
+          </center>
+
+          <ol>
+            <li>
+              Prepare the crust
+              <ol type="a">
+                <li>
+                  Mix 2 cups of crushed graham and 3 tablespoons of granulated
+                  sugar.
+                </li>
+                <li>
+                  Add ½ cup of melted butter and mix. The mixture must resemble
+                  the texture of damp sand.
+                </li>
+              </ol>
+            </li>
+            <li>
+              Prepare the cheesecake batter
+              <ol type="a">
+                <li>
+                  Beat 2 bars of 250g room temperature cream cheese until smooth
+                  and creamy.
+                </li>
+                <li>Add 1 cup of granulated sugar, mix until well combined.</li>
+                <li>
+                  Scrape down the sides of the bowl and beat for a few more
+                  minutes.
+                </li>
+                <li>Add 1 cup of heavy cream and mix until fully combined.</li>
+                <li>
+                  Add in 2 large eggs, 1 tsp of vanilla extract, and ½ tsp salt
+                  and beat together slowly until combined.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Preparation for baking
+              <ol type="a">
+                <li>Preheat the oven at 170°C for 3 mins.</li>
+                <li>Line the muffin pan with cupcake liners.</li>
+                <li>Scoop 1 tbsp of crust mixture for each liner.</li>
+                <li>Gently press to flatten make the crust compact.</li>
+                <li>Fill each liner with 3 tbsp of cheesecake batter.</li>
+                <li>Tap the muffin pan to release air bubbles.</li>
+              </ol>
+            </li>
+
+            <li>
+              Baking
+              <ol type="a">
+                <li>Bake in the preheated oven at 170°C for 20-25 minutes.</li>
+                <li>
+                  Take out the pan when the sides are firm and the center
+                  jiggles a little.
+                </li>
+                <li>Let the cupcakes cool completely</li>
+              </ol>
+            </li>
+
+            <li>Add the blueberry puree/jam for the toppings.</li>
+
+            <li>Chill the cupcakes in the refrigerator.</li>
+          </ol>
+        </div>
+
+        <div class="processBox">
+          <center>
+            <h1>Strawberry Cheesecake Cupcakes</h1>
+          </center>
+
+          <ol>
+            <li>
+              Prepare the crust
+              <ol type="a">
+                <li>
+                  Mix 2 cups of crushed graham and 3 tablespoons of granulated
+                  sugar.
+                </li>
+                <li>
+                  Add ½ cup of melted butter and mix. The mixture must resemble
+                  the texture of damp sand.
+                </li>
+              </ol>
+            </li>
+            <li>
+              Prepare the cheesecake batter
+              <ol type="a">
+                <li>
+                  Beat 2 bars of 250g room temperature cream cheese until smooth
+                  and creamy.
+                </li>
+                <li>Add 1 cup of granulated sugar, mix until well combined.</li>
+                <li>
+                  Scrape down the sides of the bowl and beat for a few more
+                  minutes.
+                </li>
+                <li>Add 1 cup of heavy cream and mix until fully combined.</li>
+                <li>
+                  Add in 2 large eggs, 1 tsp of vanilla extract, and ½ tsp salt
+                  and beat together slowly until combined.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Preparation for baking
+              <ol type="a">
+                <li>Preheat the oven at 170°C for 3 mins.</li>
+                <li>Line the muffin pan with cupcake liners.</li>
+                <li>Scoop 1 tbsp of crust mixture for each liner.</li>
+                <li>Gently press to flatten make the crust compact.</li>
+                <li>Fill each liner with 3 tbsp of cheesecake batter.</li>
+                <li>Tap the muffin pan to release air bubbles.</li>
+              </ol>
+            </li>
+
+            <li>
+              Baking
+              <ol type="a">
+                <li>Bake in the preheated oven at 170°C for 20-25 minutes.</li>
+                <li>
+                  Take out the pan when the sides are firm and the center
+                  jiggles a little.
+                </li>
+                <li>Let the cupcakes cool completely</li>
+              </ol>
+            </li>
+
+            <li>Add the blueberry puree/jam for the toppings.</li>
+
+            <li>Chill the cupcakes in the refrigerator.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="recipe cookies">
+        <div class="processBox">
+          <center>
+            <h1>Chocolate Chip Cookies</h1>
+          </center>
+
+          <ol>
+            <li>
+              Prepare the cookie dough
+              <ol type="a">
+                <li>
+                  Cream ½ cup of room temperature unsalted butter with ½ cup of
+                  granulated sugar and ½ cup of light brown sugar using a
+                  spatula.
+                </li>
+                <li>
+                  Add 1 room temperature egg and 1 tsp of vanilla extract then
+                  mix
+                </li>
+                <li>
+                  In the same bowl, sift together 1 ¼ cup of all-purpose flour,
+                  1 tbsp of cornstarch, ½ tsp of baking soda, and ½ tsp of salt.
+                </li>
+                <li>Combine until blended thoroughly</li>
+                <li>
+                  Add in 250g of chopped milk chocolate bar or 1 ½ cup of
+                  chocolate chips.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Preparation for baking
+              <ol type="a">
+                <li>
+                  Scoop 2 tbsp of the dough, roll into a ball shape by hand and
+                  place on the baking tray with parchment/baking paper.
+                </li>
+                <li>Chill the dough in the refrigerator for 1-2 hours</li>
+                <li>
+                  After that, leave spaces between the cookies about 2 inches
+                  apart in all directions.
+                </li>
+                <li>Preheat the oven at 176°C</li>
+              </ol>
+            </li>
+
+            <li>
+              Baking
+              <ol type="a">
+                <li>
+                  Bake the cookies in the oven at 176°C for 8-10 minutes, until
+                  browned around the edges.
+                </li>
+              </ol>
+            </li>
+            <li>Cool the cookies until fully set.</li>
+          </ol>
+        </div>
+
+        <div class="processBox">
+          <center>
+            <h1>Red Velvet Cookies</h1>
+          </center>
+
+          <ol>
+            <li>
+              Mix the dry ingredients
+              <ol type="a">
+                <li>
+                  In a bowl, sift together 1 ½ cups of all-purpose flour, 1 tbsp
+                  of cornstarch, ½ tsp of baking soda, ¼ tsp of salt, and 2 tsp
+                  of cocoa powder.
+                </li>
+                <li>Whisk together thoroughly</li>
+              </ol>
+            </li>
+
+            <li>
+              Mix the wet ingredients
+              <ol type="a">
+                <li>Cream ½ cup of room temperature unsalted butter</li>
+                <li>
+                  Add ⅓ cup of brown sugar and ½ cup of granulated sugar, beat
+                  until light and fluffy.
+                </li>
+                <li>Add 1 large egg and vanilla extract then mix</li>
+                <li>
+                  Add 2 tsp of red food coloring to the mixture, mix until the
+                  color has incorporated with the batter
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Mix the wet and dry mixture
+              <ol type="a">
+                <li>Combine the dry mixture to the wet mixture and blend.</li>
+                <li>
+                  Add 250g of chopped white chocolate bar or 1 ½ cup of white
+                  chocolate chips.
+                </li>
+                <li>
+                  Fold the dough until the white chocolate pieces are
+                  distributed evenly
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Preparation for baking
+              <ol type="a">
+                <li>
+                  Scoop 2 tbsp of the dough, roll into a ball shape by hand and
+                  place on the baking tray with parchment/baking paper.
+                </li>
+                <li>Chill the dough in the refrigerator for 1-2 hours</li>
+                <li>
+                  Leave spaces between the cookies about 2 inches apart in all
+                  directions.
+                </li>
+                <li>Preheat the oven at 176°C</li>
+              </ol>
+            </li>
+
+            <li>
+              Baking
+              <ol type="a">
+                <li>
+                  Bake the cookies in the oven at 176°C for 8-15 minutes, until
+                  browned around the edges.
+                </li>
+              </ol>
+            </li>
+            <li>Cool the cookies until fully set.</li>
+          </ol>
+        </div>
+
+        <div class="processBox">
+          <center>
+            <h1>Cookies and Cream Cookies</h1>
+          </center>
+
+          <ol>
+            <li>
+              Prepare the ingredients
+              <ol type="a">
+                <li>Make sure all the ingredients are room temperature.</li>
+                <li>
+                  Break apart the oreo cookies by hand into little pieces.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Mix the dry ingredients
+              <ol type="a">
+                <li>
+                  Whisk 2 cups of all-purpose flour, 2 tsp of cornstarch, ¾ tsp
+                  of baking soda, and ½ tsp of salt. Set aside.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Mix the wet ingredients
+              <ol type="a">
+                <li>
+                  Mix 10 tbsp or 140g of unsalted butter and 4 oz of cream
+                  cheese until creamy.
+                </li>
+                <li>
+                  Add ¾ cups of granulated sugar and ¼ cup of brown sugar, mix
+                  until light and fluffy.
+                </li>
+                <li>
+                  Add 2 tsp of vanilla and 1 egg, mix until combined thoroughly.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Mix the wet and dry mixture
+              <ol type="a">
+                <li>Add the dry mixture to the wet mixture and combine.</li>
+                <li>
+                  Add 200g of chopped white chocolate bar or ½ of white
+                  chocolate chips and fold the dough for a bit.
+                </li>
+                <li>Add the oreo cookies</li>
+                <li>
+                  Gently fold dough until the chocolate and the oreo cookies are
+                  distributed evenly
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Preparation for baking
+              <ol type="a">
+                <li>
+                  Scoop 2 tbsp of the dough, roll into a ball shape by hand and
+                  place on the baking tray with parchment/baking paper.
+                </li>
+                <li>Chill the dough in the refrigerator for 1-2 hours</li>
+                <li>
+                  Leave spaces between the cookies about 2 inches apart in all
+                  directions.
+                </li>
+                <li>Preheat the oven at 176°C</li>
+              </ol>
+            </li>
+
+            <li>
+              Baking
+              <ol type="a">
+                <li>
+                  Bake the cookies in the oven at 176°C for 8-15 minutes, until
+                  browned around the edges.
+                </li>
+              </ol>
+            </li>
+            <li>Cool the cookies until fully set.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="recipe float">
+        <div class="processBox">
+          <center>
+            <h1>Mango Float</h1>
+          </center>
+
+          <ol>
+            <li>
+              Making the mango shake
+              <ol type="a">
+                <li>
+                  Add 4 tbsp of mango cubes, 3 tbsp of evaporated milk, 6 tbsp
+                  of condensed milk, and 3 cups of crushed ice in the blender.
+                </li>
+                <li>Blend until smooth.</li>
+              </ol>
+            </li>
+
+            <li>
+              Assemble mango graham shake in a clear cup
+              <ol type="a">
+                <li>Fill half of the cup with mango shake</li>
+                <li>Add 2 tbsp of crushed graham</li>
+                <li>Fill the rest of the cup with mango shake</li>
+                <li>
+                  Add 1 tbsp of crushed graham and spread it out to completely
+                  cover the top.
+                </li>
+                <li>On top of the crushed graham, add 1 tbsp of mango cubes</li>
+                <li>Drizzle with condensed milk on top of the mango cubes</li>
+              </ol>
+            </li>
+
+            <li>Chill.</li>
+          </ol>
+        </div>
+
+        <div class="processBox">
+          <center>
+            <h1>Oreo Float</h1>
+          </center>
+
+          <ol>
+            <li>
+              Prepare the ingredients
+              <ol type="a">
+                <li>Crush 9-12 pcs of oreo cookies</li>
+                <li>Chop 2-3 pcs of oreo cookies for toppings</li>
+              </ol>
+            </li>
+
+            <li>
+              Making the oreo shake
+              <ol type="a">
+                <li>
+                  Add 3 pcs of oreo cookies, 6 tbsp of evaporated milk, and 3
+                  cups of crushed ice into the blender. Blend.
+                </li>
+                <li>
+                  Gradually add 3 cups of crushed ice and blend until smooth.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              Assemble oreo shake in a clear cup
+              <ol type="a">
+                <li>Pour the oreo shake halfway through the cup</li>
+                <li>Add 2 tbsp of crushed oreos</li>
+                <li>Add 2 tbsp of crushed oreos</li>
+                <li>Top with chopped and crushed oreos</li>
+                <li>Drizzle with condensed milk</li>
+              </ol>
+            </li>
+            <li>Chill.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="recipe graham">
+        <div class="processBox">
+          <center>
+            <h1>Graham Balls</h1>
+          </center>
+
+          <ol>
+            <li>
+              Prepare the graham dough
+              <ol type="a">
+                <li>In a bowl add 2 ½ cups of crushed graham</li>
+                <li>
+                  Add a little bit of condensed milk and combined thoroughly
+                </li>
+                <li>
+                  Gradually add more condensed milk to thicken the mixture
+                </li>
+                <li>
+                  Knead the dough by hand when the mixture starts to show lumps
+                </li>
+                <li>
+                  Add more condensed milk needed and until the mixture forms a
+                  dough-like appearance.
+                </li>
+              </ol>
+            </li>
+            <li>
+              Making Graham Balls
+              <ol type="a">
+                <li>
+                  Roll and flatten an ample amount of graham dough by hand
+                </li>
+                <li>Add 1 piece of marshmallow in the middle</li>
+                <li>Cover the marshmallow and shape the dough into a ball</li>
+              </ol>
+            </li>
+            <li>
+              Decorate the graham balls
+              <ol type="a">
+                <li>
+                  Pour ½ cup of crushed graham or any other garnish into a plate
+                </li>
+                <li>Roll and cover the graham balls with the garnish</li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="recipe smores">
+        <div class="processBox">
+          <center>
+            <h1>S’mores</h1>
+          </center>
+
+          <ol>
+            <li>
+              Prepare the ingredients
+              <ol type="a">
+                <li>Chop or break apart a chocolate bar into equal pieces</li>
+                <li>Break apart graham crackers into equal square pieces</li>
+              </ol>
+            </li>
+            <li>
+              Assemble the s’mores
+              <ol type="a">
+                <li>
+                  Stack 1 piece of graham cracker, 1 piece of chocolate, 1
+                  marshmallow, and another piece of graham cracker exactly in
+                  that order.
+                </li>
+              </ol>
+            </li>
+            <li>
+              Grill the s’mores
+              <ol type="a">
+                <li>Place the s’mores on top of a foil</li>
+                <li>
+                  Grill until the marshmallow puffs up and the chocolate melts a
+                  little
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="plan" id="controls">
+        <img
+          src="./assets/cupcake2.jpg"
+          width="400"
+          height="400"
+          class="image"
+        />
+        <div>
+          <h2>Production/Service Process and Controls</h2>
+          <h4>
+            The quality control of the production of each product will be
+            ensured in every production process. Each product has a different
+            process of its own. Hence, meticulous preparation must be guaranteed
+            in order to yield results of high quality. As most of the products
+            require baking, a method of cooking that utilizes prolonged exposure
+            to dry heat at a certain time duration and temperature, time and
+            temperature must always be taken into account to prevent mishaps in
+            creating the product. Refrigeration is also a key component in
+            making the products remain fresh at all times. Unlike baking,
+            however, time intervals are not always considered. For contamination
+            controls, the workplace must be invariably sterile. The workers must
+            wear the necessary equipment in order to ensure the quality and
+            cleanliness of the products.
+          </h4>
+        </div>
+      </div>
+
+      <div class="plan" id="logistics">
+        <img
+          src="./assets/cupcake2.jpg"
+          width="400"
+          height="400"
+          class="image"
+        />
+        <div>
+          <h2>Distribution logistics</h2>
+          <h4>
+            Maroyaka will primarily operate home-based and use social media
+            (e.g. Facebook, Twitter, Instagram) to promote products and take
+            orders for better communication, in case of special requests from
+            the customers. The customers will also be given an option to pick up
+            their orders or have it delivered to the comfort of their homes
+            through their preferred courier (e.g. Grab Express, Lalamove, Mr.
+            Speedy).
+          </h4>
+        </div>
+      </div>
+
+      <div class="plan" id="compliance">
+        <img
+          src="./assets/cupcake2.jpg"
+          width="400"
+          height="400"
+          class="image"
+        />
+        <div>
+          <h2>Regulatory and other compliance issues</h2>
+          <h4>
+            Maroyaka will primarily operate home-based and use social media
+            (e.g. Facebook, Twitter, Instagram) to promote products and take
+            orders for better communication, in case of special requests from
+            the customers. The customers will also be given an option to pick up
+            their orders or have it delivered to the comfort of their homes
+            through their preferred courier (e.g. Grab Express, Lalamove, Mr.
+            Speedy).
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

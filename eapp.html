@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<head>
+  <title>IA 2 | EAPP</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    height: 100vh;
+    background-color: #f5f2ed;
+    background-image: url(./assets/eapp/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .appbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background: #2b292b;
+    color: #c29d52;
+    z-index: 9999;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 24%;
+  }
+
+  .title {
+    border-radius: 28px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 10px 10px 36px #a8a8a8, -10px -10px 36px #ffffff;
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main {
+    height: 100vh;
+    display: flex;
+  }
+
+  .contact {
+    width: 20%;
+    padding: 16px;
+    height: 100%;
+  }
+
+  .content {
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+    padding: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .company {
+    width: 20%;
+    padding: 16px;
+    text-align: center;
+    height: 100%;
+  }
+
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
+  .content::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 8px;
+  }
+
+  .content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .content::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 8px;
+  }
+
+  .menulink {
+    display: block;
+    color: #f5f2ed;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .menulink::after {
+    content: "";
+    background: #c29d52;
+    mix-blend-mode: hard-light;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .menulink:hover::after {
+    height: calc(100% + 8px);
+  }
+</style>
+
+<body>
+  <div>
+    <div class="appbar">
+      <a
+        href="https://darealtube.github.io/Emp-Tech-IA/"
+        title="Return to Homepage"
+      >
+        <img
+          src="./assets/logo.png"
+          height="60px"
+          width="180px"
+          style="margin: 32px"
+        />
+      </a>
+      <span style="flex-grow: 1"></span>
+      <div class="menu" style="margin: 48px">
+        <a href="./index.html" class="menulink">Home</a>
+        <a href="./plans.html" class="menulink">Plans</a>
+        <a href="./bio.html" class="menulink" title="To Biology">Other</a>
+      </div>
+    </div>
+
+    <div style="line-height: 0" class="heading">
+      <img src="./assets/eapp/eapp.jpg" width="100%" height="100%" />
+      <div class="title">
+        <h1 style="text-align: center">
+          Concept Paper: Definition, Explication, Clarification
+        </h1>
+        <h2 style="text-align: center">Integrative Assessment II</h2>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="company">
+        <img src="./assets/eapp/maroyaka.png" width="100%" height="auto" />
+        <h1>Maroyaka</h1>
+        <h2>Sucre Jar</h2>
+        <hr />
+        <h6>April 22, 2022</h6>
+        <hr />
+        <h4 style="text-align: justify; text-justify: inter-word">
+          “Satisfy your cravings at an affordable price”. Desserts such
+          cupcakes, cheesecakes, and other pastries are often expensive — and
+          yes, even in your local bake shops. Thus, we came up with producing
+          high-quality desserts that not only can satisfy your taste buds but
+          can also be bought at a reasonable price.
+        </h4>
+      </div>
+
+      <div class="content">
+        <h1><i>DEFINITION (Senakulo)</i></h1>
+        <h2>Formal Definition:</h2>
+
+        <h3>Senakulo (noun)</h3>
+
+        <h4>
+          Senakulo is defined as a dramatic Lenten play that memorializes the
+          Passion of Jesus Christ and is commonly performed at least eight
+          nights during the events of Holy Week in the Philippines.
+        </h4>
+
+        <h2>Informal Definition</h2>
+
+        <h4>
+          Senakulo is also known as Cenaculo in Spanish and Passion Play in
+          English. It is a Filipino depiction of the life and death of Jesus
+          Christ.
+        </h4>
+
+        <h2>Extended Definition</h2>
+        <h4>
+          Senakulo is a renowned Christian tradition often performed from Palm
+          Sunday to Easter Sunday of the Holy Week. Senakulo can be performed on
+          the street, inside a chapel, or in an open area. It can also be
+          performed during Festivals. For instance, in Marinduque, Senakulo is
+          usually enacted during the Moriones Festival, in which performers wear
+          masks to portray the characters in a much more joyous manner.
+        </h4>
+        <h4>
+          Senakulo is very much similar to Pasyon as they both chronicle the
+          life and death of Jesus Christ. However, Pasyon is told mainly through
+          a piece of narrative consisting of five lines of stanzas with eight
+          syllables each. A Pabasa (“chanting”) is usually exercised during
+          Pasyon. On the other hand, Senakulo is more of a biblical reenactment
+          of the Passion of Christ and it does not feature Pabasa.
+        </h4>
+
+        <h1><i>EXPLICATION (Line)</i></h1>
+        <h3>The Elements of Art - “Line”</h3>
+        <a href="https://thevirtualinstructor.com/line.html">Source</a>
+
+        <h4>
+          Matt Fussell described line as the most fundamental element of
+          drawing. He also viewed line as a point that moves on the surface of
+          the canvas. Line is oftentimes used to highlight the edges of the
+          subject, as well as to emphasize depth and replicate a reference. With
+          varying thickness and value, lines are capable of suggesting movement,
+          rhythm, and emotion. For instance, scribbled lines may convey anger,
+          whilst refined lines may convey calmness.
+        </h4>
+
+        <h1><i>CLARIFICATION (Visual Arts)</i></h1>
+        <h4>
+          Visual Arts is a form of art that involves the perception of sight
+          which can then be interpreted. It mainly focuses on the design and
+          visual representations which opens up a wide set of ideas, sometimes
+          with subsets. As an example, painting is a type of visual art that
+          focuses on applying paint to a surface to create art. It also has its
+          subsets which are: watercolor painting, oil painting, acrylic
+          painting, spray painting, finger painting, etc. To clarify, visual
+          arts are done by hand and not by technological means so it does not
+          include digital painting, photo manipulation, etc.
+        </h4>
+      </div>
+
+      <div class="contact">
+        <h1>Output by:</h1>
+        <hr />
+        <h4>BREQUILLO, Lean</h4>
+        <h4>BRINGUELO, Christine Joy</h4>
+        <h4>CAINGAT, Jethro</h4>
+        <h4>DEL ROSARIO, Katherine</h4>
+        <h4>JAVIER, Darryl</h4>
+        <h4>KADUSALE, Jan Edrian</h4>
+        <h4>MALLARI, Ivan Ashley</h4>
+        <h4>SALINAS, Julio Nico Jose</h4>
+        <hr />
+      </div>
+    </div>
+  </div>
+</body>

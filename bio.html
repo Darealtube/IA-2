@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<head>
+  <title>IA 2 | Biology</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Helvetica", "Arial", sans-serif;
+    height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .appbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-image: url(./assets/bioappbar.png);
+    background-size: cover;
+    color: #fff7f1;
+    z-index: 9999;
+  }
+
+  .menulink {
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .menulink::after {
+    content: "";
+    background: green;
+    mix-blend-mode: color-dodge;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .menulink:hover::after {
+    height: calc(100% + 8px);
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 24%;
+  }
+
+  .biomenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 160px;
+  }
+
+  .biomenu img {
+    transition: transform 0.5s;
+  }
+
+  .biomenu img:hover {
+    transform: scale(1.1);
+    border-radius: 28px;
+    background: linear-gradient(145deg, #81ce99, #81ce99);
+    box-shadow: 10px 10px 36px #81ce99, -10px -10px 36px #81ce99;
+  }
+
+  .plant {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .plant img {
+    border: 8px solid #81ce99;
+    border-radius: 28px;
+  }
+
+  .characteristics {
+    height: 100vh;
+    background-color: #81ce99;
+    color: #fff;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 80px;
+  }
+
+  .characteristics td {
+    transition: background-color 0.5s;
+  }
+
+  .characteristics td:hover {
+    color: #81ce99;
+    background-color: #fff7f1;
+  }
+
+  .revealer {
+    color: transparent;
+    background-image: linear-gradient(#81ce99, #81ce99),
+      linear-gradient(#81ce99, #81ce99);
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    animation: revealer-text 0.8s 0.2s forwards;
+  }
+
+  @keyframes revealer-text {
+    0% {
+      background-size: 0% 100%;
+    }
+    50% {
+      background-size: 70% 100%;
+      background-position: left;
+    }
+    51% {
+      background-size: 100% 100%;
+      background-position: right;
+    }
+    100% {
+      background-size: 0% 100%, 100% 100%;
+      background-position: right;
+    }
+  }
+</style>
+
+<body>
+  <div>
+    <div class="appbar">
+      <a
+        href="https://darealtube.github.io/Emp-Tech-IA/"
+        title="Return to Homepage"
+      >
+        <img
+          src="./assets/logo.png"
+          height="60px"
+          width="180px"
+          style="margin: 32px"
+        />
+      </a>
+      <span style="flex-grow: 1"></span>
+      <div class="menu" style="margin: 48px">
+        <a href="./index.html" class="menulink">Home</a>
+        <a href="./plans.html" class="menulink">Plans</a>
+        <a href="./eapp.html" class="menulink" title="To EAPP">Other</a>
+      </div>
+    </div>
+
+    <div class="biomenu">
+      <table height="100%">
+        <tr align="center">
+          <th align="center" colspan="100%">
+            <h1 class="revealer">Plant Systematics</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <a href="#celery" title="To Celery"
+              ><img src="./assets/bio/celery.png" width="240" height="320"
+            /></a>
+          </td>
+          <td>
+            <a href="#mayana" title="To Mayana">
+              <img src="./assets/bio/mayana.png" width="240" height="320"
+            /></a>
+          </td>
+          <td rowspan="2">
+            <a href="#alugbati" title="To Alugbati">
+              <img src="./assets/bio/alugbati.png" width="320" height="480"
+            /></a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="#oregano" title="To Oregano">
+              <img src="./assets/bio/oregano.png" width="240" height="320" />
+            </a>
+          </td>
+          <td>
+            <a href="#tomato" title="To Tomato">
+              <img src="./assets/bio/tomato.png" width="240" height="320" />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="plant" id="celery">
+      <div
+        style="
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="./assets/bio/celery.png" width="80%" height="100%" />
+      </div>
+
+      <div style="width: 50%">
+        <h1 style="color: #4fba70; text-align: center">Celery</h1>
+        <h3>
+          Apium graveolens L., commonly known as Celery, is a vegetable from the
+          Family Apiaceae. It is an annual perennial plant that grows throughout
+          Europe as well as the tropical and the subtropical regions of Asia and
+          Africa and is cultivated worldwide. Celery has a complex structure
+          containing stems, leaves, and thick roots. It is typically grown in
+          nutritious soil that has been fertilized with compost and well-rotted
+          manure. Moreover, it requires consistent moisture to grow ideally.
+          Celery is often characterized with its erect biennial or perennial
+          herb and the distinct smell of celery. Its height ranges up to 1 meter
+          and above. The stem has prominent rather coarse grooves, rising from a
+          large fleshy taproot. Celery has compound leaves, made up of two or
+          more discrete leaflets. The lower leaves have a pinnate arrangement,
+          usually 10-14 centimeters long with deltate-rhomboid segments scaling
+          up to 4-5 cm. It is commonly used as an ingredient in human food and
+          beverages. Furthermore, it is often utilized as an anthelmintic,
+          antispasmodic, carminative, diuretic, laxative, and a sedative
+          stimulant in traditional medicine
+        </h3>
+      </div>
+    </div>
+
+    <div class="plant" id="mayana">
+      <div
+        style="
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="./assets/bio/mayana.png" width="80%" height="100%" />
+      </div>
+
+      <div style="width: 50%">
+        <h1 style="color: #4fba70; text-align: center">Mayana</h1>
+        <h3>
+          Coleus blancoi Benth., commonly known as Mayana or Coleus, is a
+          species of flowering plant belonging to the Family Lamiaceae. It is
+          commonly found in areas with tropical climates, in which its native
+          range is tropical and subtropical Asia to northern Australia. Mayana
+          plants are usually grown for its leaves, not for the flowers. It
+          thrives in rich, well-drained soil as well as in heat, the kind of
+          environment that promotes rapid growth. The plant has a complex
+          structure containing stems, leaves, and thick roots. It is a woody
+          angiosperm with opposite compound leaves. Mayana or Coleus is usually
+          characterized with its branched, fleshy, annual herb about 1 meter
+          high. Both the stems and the flowers are purplish. The flowers are
+          numerous and 15 to 30 centimeters long, borne in lax, terminal,
+          simple, or branched inflorescences. The leaves, which is the most
+          noticeable asset of Mayana, are variously blotched or colored; with
+          the colors usually ranging from uniformly velvety-purple, yellow,
+          pink, intense red, and luminous chartreuse. Moreover, its leaves are
+          usually ovulate, rather coarsely toothed, more or less hairy, and are
+          5 to 10 centimeters long. Mayana or Coleus plants are generally used
+          in folkloric medicine in which it is a natural analgesic, primarily
+          used for pain, soreness, swelling, and cuts. It can also be an adjunct
+          medication for delayed menstruation and diarrhea. However, for non
+          medicinal purposes, it is typically displayed as an ornamental plant.
+        </h3>
+      </div>
+    </div>
+
+    <div class="plant" id="oregano">
+      <div
+        style="
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="./assets/bio/oregano.png" width="80%" height="100%" />
+      </div>
+
+      <div style="width: 50%">
+        <h1 style="color: #4fba70; text-align: center">Oregano</h1>
+        <h3>
+          Origanum vulgare L., commonly known as oregano belongs to the family
+          ‘Lamiaceae’. It is a popular herb that has been naturalized in parts
+          of the United States and Mexico and primarily grows to the hills of
+          Mediterranean countries such as Greece, France, Egypt, Bosnia, and
+          Albania. Oregano plant is best grown in a dry soil with a pH of 6.5 to
+          7.0 in a sunny garden bed or any container. At maturity, it typically
+          grows 1 to 2 feet tall and 2 feet wide. The leaves of oregano are
+          generally not stiff, usually broader, and with well-developed leaf
+          blade, usually with a midvein and well-developed secondary and
+          tertiary venation. In addition, its stamen is ascending and the woody
+          angiosperms have opposite compound leaves. Like any other plant that
+          has a medicinal value, oregano offers a lot of health benefits as per
+          the fact that it has antibacterial effects, anti-cancer agent, and
+          antioxidant properties. Moreover, oregano serves as a home remedy for
+          many ailments, especially respiratory tract conditions like asthma,
+          cough, and croup.
+        </h3>
+      </div>
+    </div>
+
+    <div class="plant" id="tomato">
+      <div
+        style="
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="./assets/bio/tomato.png" width="80%" height="100%" />
+      </div>
+
+      <div style="width: 50%">
+        <h1 style="color: #4fba70; text-align: center">Tomato</h1>
+        <h3>
+          Tomato (Solanum lycopersicum L.) is an economically important fruit
+          crop that originated in Central America and western South America. It
+          belongs to the Solanaceae family, also known as the potato or deadly
+          nightshade family. In terms of its height, tomato typically grows 3 to
+          10 ft in height depending on the variety. It grow well in many types
+          of soil although, a well-drained and fertile loam with a pH of 5.8 to
+          7.0 is the most suitable. The thickness of its stems, leaves, and
+          roots are generally greater than 1, with vascular tissue, reproducing
+          by seeds or spores. Moreover, the leaves of a tomato is generally not
+          stiff, usually broader and with well-developed leaf blades. In regard
+          to its nutritional facts and health benefits, tomatoes are
+          scientifically proven to reduce fine lines, wrinkles, and age spots as
+          per the fact that this fruit crop contains anti-aging properties.
+          Aside from its anti-aging properties, it also has antioxidant
+          properties that helps people fight free radicals in the body and has
+          the ability to protect people against cancer and any other conditions.
+        </h3>
+      </div>
+    </div>
+
+    <div class="plant" id="alugbati">
+      <div
+        style="
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="./assets/bio/alugbati.png" width="80%" height="100%" />
+      </div>
+
+      <div style="width: 50%">
+        <h1 style="color: #4fba70; text-align: center">Alugbati</h1>
+        <h3>
+          Alugbati or Malabar Spinach (Basella alba L.) is an edible perennial
+          vine that belongs to the Family Basellaceae. It is often found in
+          tropical Asia, Africa, and Malaya, where it is largely cultivated as a
+          vegetable. The plant is also native to the Indian subcontinent,
+          Southeast Asia, and New Guinea. The ideal environment for the growth
+          of alugbati is in soils high in organic matter. Moreover, the soil
+          must be retained moist and loamy in order to produce the best state of
+          alugbati. Alugbati is generally a smooth, twining herbaceous vine that
+          can grow up to several meters in length. It is often characterized by
+          its purplish or green stems as well as its somewhat fleshy leaves. The
+          leaves are commonly mucilaginous, ovate or heart-shaped, 5 to 12
+          centimeters long, stalked, and are tapering to a pointed tip with a
+          cordate base. Furthermore, its spikes are axillary and solitary, going
+          up to 5 to 29 centimeters in length. Alugbati commonly serves as an
+          ingredient in different cuisines. It also serves medicinal properties,
+          where it improves testosterone levels in males. It can also be a safe
+          laxative for pregnant women and children, where decoction of leaves is
+          recommended. For external uses, the mucilaginous leaves of alugbati
+          may be crushed and applied in urticaria, burns, and scalds.
+        </h3>
+      </div>
+    </div>
+
+    <div class="characteristics" id="characteristics">
+      <table height="100%" width="100%" cellpadding="16px">
+        <tr>
+          <th colspan="100%">
+            <h1 style="text-align: center">Characteristics</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <div style="display: flex; align-items: center">
+              <div><h1 style="font-size: 6vmin; margin-right: 16px">A</h1></div>
+              <div>
+                Plant more complex, with stems, leaves, and roots generally > 1
+                cell thick, with vascular tissue, reproducing by seeds or spores
+                (+), Plant lacks complexity (-)
+              </div>
+            </div>
+          </td>
+          <td>
+            <div style="display: flex; align-items: center">
+              <div><h1 style="font-size: 6vmin; margin-right: 16px">B</h1></div>
+              <div>
+                Plant terrestrial, wetland, or aquatic, normally rooted to the
+                substrate (+), Plant is not terrestrial, wetland, or aquatic,
+                not normally rooted to the substrate (-)
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="display: flex; align-items: center">
+              <div><h1 style="font-size: 6vmin; margin-right: 16px">C</h1></div>
+              <div>
+                Plants woody, either trees, shrubs, lianas, subshrubs, or
+                rosette shrubs, with perennating structures borne on long-lived,
+                above-ground, woody stems or caudices (+), Plant is not woody,
+                lacks perennating structure borne on long-lived, above-ground,
+                woody stems or caudices (-)
+              </div>
+            </div>
+          </td>
+          <td>
+            <div style="display: flex; align-items: center">
+              <div><h1 style="font-size: 6vmin; margin-right: 16px">D</h1></div>
+              <div>
+                Plants herbaceous, herbs, or herbaceous vines, annual, biennial,
+                or perennial, if the latter, with perennating structures borne
+                below-ground as crowns, offsets, etc., or as buds on woody
+                rhizomes (+), Plant is not herbaceous (-)
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="display: flex; align-items: center">
+              <div><h1 style="font-size: 6vmin; margin-right: 16px">E</h1></div>
+              <div>
+                Leaves generally not stiff, usually broader and with
+                well-developed leaf blades, usually with a midvein and well
+                developed secondary and tertiary venation (+), Leaves generally
+                stiff, narrow without well-developed leaf blades, lacks a
+                midvein and no well-developed secondary and tertiary venation
+                (-)
+              </div>
+            </div>
+          </td>
+          <td>
+            <div style="display: flex; align-items: center">
+              <div><h1 style="font-size: 6vmin; margin-right: 16px">F</h1></div>
+              <div>
+                Woody angiosperms with opposite, compound leaves (+), Non-woody
+                angiosperms, compound leaves not opposite (-)
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="100%" align="center">
+            <h1 style="font-size: 6vmin; margin-right: 16px">G</h1>
+            Stamen ascending (+), Stamen not ascending (-)
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="venn" style="line-height: 0">
+      <img src="./assets/bio/Venn Diagram.png" width="100%" height="100%" />
+    </div>
+
+    <div id="cladogram" style="line-height: 0">
+      <img src="./assets/bio/Cladogram.png" width="100%" height="100%" />
+    </div>
+  </div>
+</body>
