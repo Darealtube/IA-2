@@ -62,7 +62,7 @@
   .summary {
     color: #fff7f1;
     height: 100%;
-    padding: 32px;
+    padding: 64px;
   }
 
   .management {
@@ -124,6 +124,15 @@
   .menulink:hover::after {
     height: calc(100% + 8px);
   }
+
+  .title {
+    transition: all 0.4s;
+    font-size: 6vmin;
+  }
+
+  .title:hover {
+    transform: scale(1.05);
+  }
 </style>
 
 <body>
@@ -148,7 +157,7 @@
       </div>
     </div>
     <div class="summary" id="summary">
-      <h1 style="font-size: 10vmin">Executive Summary</h1>
+      <h1 class="title">Executive Summary</h1>
 
       <h4>
         Maroyaka offers a unique touch to the classic snack go-to of the people.
@@ -207,8 +216,8 @@
         id="logo"
       />
 
-      <h1>Sucre Jar</h1>
-      <h2>1815 Kalawakan St., Karangalan Village, Manggahan, Pasig City</h2>
+      <h1 style="color:#f74049">Sucre Jar</h1>
+      <h2 style="color:#f74049">1815 Kalawakan St., Karangalan Village, Manggahan, Pasig City</h2>
     </div>
 
     <div id="contact" style="line-height: 0">
@@ -219,8 +228,17 @@
       <img src="./assets/contacts.png" width="100%" height="100%" />
     </div>
 
-    <div id="contact" style="line-height: 0">
-      <img src="./assets/orgchart.png" width="100%" height="100%" />
+    <br />
+    <div
+      id="contact"
+      style="
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <img src="./assets/orgchart.png" width="80%" height="80%" />
     </div>
 
     <div class="organization" id="organization">
