@@ -158,6 +158,76 @@
   .title2:hover {
     color: #c29d52;
   }
+
+  /* APPBAR MENU */
+  nav {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  ul {
+    background: transparent;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  li {
+    color: #fff;
+    background: transparent;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    width: 80px;
+  }
+
+  li a {
+    color: #fff7f1;
+  }
+
+  li:hover,
+  li:focus-within {
+    background: #c29d52;
+    cursor: pointer;
+  }
+
+  li:focus-within a {
+    outline: none;
+  }
+
+  ul li ul {
+    background: #2b292b;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 100%;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    width: 100%;
+  }
+
+  ul li:hover > ul,
+  ul li:focus-within > ul,
+  ul li ul:hover,
+  ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+  ul li ul li {
+    clear: both;
+  }
+
+  a {
+    text-decoration: none;
+  }
 </style>
 
 <body>
@@ -175,11 +245,21 @@
         />
       </a>
       <span style="flex-grow: 1"></span>
-      <div class="menu" style="margin: 48px">
-        <a href="./index.html" class="menulink">Home</a>
-        <a href="./plans.html" class="menulink">Plans</a>
-        <a href="./bio.html" class="menulink" title="To Biology">Other</a>
-      </div>
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li><a href="./plans.html">Plans</a></li>
+          <li>
+            <a href="#" aria-haspopup="true">Other</a>
+            <ul class="dropdown" aria-label="submenu">
+              <li><a href="./bio.html">Biology</a></li>
+              <li><a href="./eapp.html">EAPP</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <div style="line-height: 0" class="heading">

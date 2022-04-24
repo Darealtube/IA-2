@@ -143,26 +143,7 @@
     background-size: cover;
     padding: 16px;
     width: 100%;
-  }
-
-  .smores {
-    background-image: url(./assets/plans/smores.jpg);
-  }
-
-  .graham {
-    background-image: url(./assets/plans/graham.jpg);
-  }
-
-  .float {
-    background-image: url(./assets/plans/float.jpg);
-  }
-
-  .cookies {
-    background-image: url(./assets/plans/cookies.jpg);
-  }
-
-  .cupcakes {
-    background-image: url(./assets/plans/cupcakes.jpg);
+    background-image: url(./assets/plans/palaman.gif);
   }
 
   .menulink {
@@ -250,6 +231,74 @@
     box-shadow: 10px 10px 36px #f74049, -10px -10px 36px #f74049;
     color: #fff7f1;
   }
+
+  /* APPBAR MENU */
+  nav {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  ul {
+    background: transparent;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  li {
+    background: transparent;
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    width: 80px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #fff7f1;
+  }
+
+  li:hover,
+  li:focus-within {
+    background: #93242a;
+    color: #f74049;
+    cursor: pointer;
+  }
+
+  li:focus-within a {
+    outline: none;
+  }
+
+  ul li ul {
+    background: #f74049;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 100%;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    width: 100%;
+  }
+
+  ul li:hover > ul,
+  ul li:focus-within > ul,
+  ul li ul:hover,
+  ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+  ul li ul li {
+    clear: both;
+  }
 </style>
 
 <body>
@@ -267,11 +316,21 @@
         />
       </a>
       <span style="flex-grow: 1"></span>
-      <div class="menu" style="margin: 48px">
-        <a href="./index.html" class="menulink">Home</a>
-        <a href="./plans.html" class="menulink">Plans</a>
-        <a href="./bio.html" class="menulink" title="To Biology">Other</a>
-      </div>
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li><a href="./plans.html">Plans</a></li>
+          <li>
+            <a href="#" aria-haspopup="true">Other</a>
+            <ul class="dropdown" aria-label="submenu">
+              <li><a href="./bio.html">Biology</a></li>
+              <li><a href="./eapp.html">EAPP</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <div class="plan" id="product">
@@ -281,15 +340,14 @@
         <br />
         <br />
         <h2>Purpose of the Product/Service</h2>
-        <h4 style="font-weight: 200">
-          Maroyaka is looking forward to breaking the association of pastries to
-          being expensive and rightfully bring down the prices in the pastry
-          industry. This will allow “pastry wanters” to become “pastry havers.”
-          Offering an affordable product in the market will let customers have a
-          wider variety of delicacies they like and afford. As of now, Maroyaka
-          offers 5 different products and is checking out the possibility of
-          expanding their list of products.
-        </h4>
+
+        Maroyaka is looking forward to breaking the association of pastries to
+        being expensive and rightfully bring down the prices in the pastry
+        industry. This will allow “pastry wanters” to become “pastry havers.”
+        Offering an affordable product in the market will let customers have a
+        wider variety of delicacies they like and afford. As of now, Maroyaka
+        offers 5 different products and is checking out the possibility of
+        expanding their list of products.
       </div>
     </div>
 
@@ -299,20 +357,18 @@
         <br />
         <br />
         <br />
-        <h2>Product’s Unique Features</h2>
-        <h4 style="font-weight: 200">
-          Maroyaka approaches the pastry industry with two unique features.
-          First will be their recipe for their following products which were
-          developed for years of continued practice and flourishing by their
-          bakers, separating their product’s identity from the rest of its
-          competitors. Design-wise, the bakers from Maroyaka honed their
-          artistry along with their baking abilities. Thus, the products
-          Maroyaka presents have their own charm and attractiveness that matches
-          none. Second, the capability of the company to micromanage their
-          resources that results in their products having a noteworthy cut in
-          price. The cut in price allows a significant difference when compared
-          with their leading competitors
-        </h4>
+        <h2><b>Product’s Unique Features</b></h2>
+
+        Maroyaka approaches the pastry industry with two unique features. First
+        will be their recipe for their following products which were developed
+        for years of continued practice and flourishing by their bakers,
+        separating their product’s identity from the rest of its competitors.
+        Design-wise, the bakers from Maroyaka honed their artistry along with
+        their baking abilities. Thus, the products Maroyaka presents have their
+        own charm and attractiveness that matches none. Second, the capability
+        of the company to micromanage their resources that results in their
+        products having a noteworthy cut in price. The cut in price allows a
+        significant difference when compared with their leading competitors
       </div>
     </div>
 
@@ -399,7 +455,7 @@
         product/render the service
       </h1>
 
-      <div class="recipe cupcakes">
+      <div class="recipe">
         <div class="processBox">
           <center>
             <h1>Chocolate Cupcake Process</h1>
@@ -785,9 +841,7 @@
             <li>Chill the cupcakes in the refrigerator.</li>
           </ol>
         </div>
-      </div>
 
-      <div class="recipe cookies">
         <div class="processBox">
           <center>
             <h1>Chocolate Chip Cookies</h1>
@@ -1012,9 +1066,7 @@
             <li>Cool the cookies until fully set.</li>
           </ol>
         </div>
-      </div>
 
-      <div class="recipe float">
         <div class="processBox">
           <center>
             <h1>Mango Float</h1>
@@ -1091,9 +1143,7 @@
             <li>Chill.</li>
           </ol>
         </div>
-      </div>
 
-      <div class="recipe graham">
         <div class="processBox">
           <center>
             <h1>Graham Balls</h1>
@@ -1140,9 +1190,7 @@
             </li>
           </ol>
         </div>
-      </div>
 
-      <div class="recipe smores">
         <div class="processBox">
           <center>
             <h1>S’mores</h1>
@@ -1184,7 +1232,7 @@
     <div style="padding: 64px">
       <div class="plan" id="controls">
         <img
-          src="./assets/cupcake2.jpg"
+          src="./assets/plans/contained.jpg"
           width="400"
           height="400"
           class="image"
@@ -1214,7 +1262,7 @@
 
       <div class="plan" id="logistics">
         <img
-          src="./assets/cupcake2.jpg"
+          src="./assets/plans/cupcakes.jpg"
           width="400"
           height="400"
           class="image"
@@ -1238,12 +1286,14 @@
 
       <div class="plan" id="compliance">
         <img
-          src="./assets/cupcake2.jpg"
+          src="./assets/eapp/maroyaka.png"
           width="400"
           height="400"
           class="image"
         />
         <div>
+          <br />
+          <br />
           <br />
           <br />
           <br />
@@ -1393,11 +1443,11 @@
 
       <h1 style="text-align: center">Pricing Policy</h1>
 
-      <h2 style="text-align: center">
+      <h4 style="text-align: center; font-weight: 200">
         The Sucre Jar Company will adopt a different price based on the number
         of sweet delicacies present in a box and also the size of cups. As such,
         below is the pricing scheme that will be adopted:
-      </h2>
+      </h4>
 
       <table align="center" class="plantable center" width="50%">
         <tr>

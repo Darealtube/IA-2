@@ -176,6 +176,93 @@
     position: relative;
     right: 40px;
   }
+
+  .dichotomy {
+    display: flex;
+    flex-direction: column;
+    background-color: #4fba70;
+    color: #fff;
+    padding: 160px;
+  }
+
+  .dichkey {
+    transition: all 0.5s;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .dichkey:hover {
+    background-color: #fff;
+    color: #4fba70;
+  }
+
+  /* APPBAR MENU */
+  nav {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  ul {
+    background: transparent;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .appmenu {
+    background: transparent;
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    width: 80px;
+  }
+
+  .appmenu a {
+    text-decoration: none;
+    color: #fff7f1;
+  }
+
+  .appmenu:hover,
+  .appmenu:focus-within {
+    background: #174e28;
+    color: #fff7f1;
+    cursor: pointer;
+  }
+
+  .appmenu:focus-within a {
+    outline: none;
+  }
+
+  ul .appmenu ul {
+    background: #4fba70;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 100%;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    width: 100%;
+  }
+
+  ul .appmenu:hover > ul,
+  ul .appmenu:focus-within > ul,
+  ul .appmenu ul:hover,
+  ul .appmenu ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+  ul .appmenu ul .appmenu {
+    clear: both;
+  }
 </style>
 
 <body>
@@ -193,11 +280,21 @@
         />
       </a>
       <span style="flex-grow: 1"></span>
-      <div class="menu" style="margin: 48px">
-        <a href="./index.html" class="menulink">Home</a>
-        <a href="./plans.html" class="menulink">Plans</a>
-        <a href="./eapp.html" class="menulink" title="To EAPP">Other</a>
-      </div>
+      <nav role="navigation">
+        <ul>
+          <li class="appmenu">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="appmenu"><a href="./plans.html">Plans</a></li>
+          <li class="appmenu">
+            <a href="#" aria-haspopup="true">Other</a>
+            <ul class="dropdown" aria-label="submenu">
+              <li class="appmenu"><a href="./bio.html">Biology</a></li>
+              <li class="appmenu"><a href="./eapp.html">EAPP</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <div class="biomenu">
@@ -258,7 +355,7 @@
 
       <div style="width: 50%">
         <h1 style="color: #4fba70; text-align: center">Celery</h1>
-        <h3 style="font-weight: 200;">
+        <h3 style="font-weight: 200">
           Apium graveolens L., commonly known as Celery, is a vegetable from the
           Family Apiaceae. It is an annual perennial plant that grows throughout
           Europe as well as the tropical and the subtropical regions of Asia and
@@ -294,7 +391,7 @@
 
       <div style="width: 50%">
         <h1 style="color: #4fba70; text-align: center">Mayana</h1>
-        <h3 style="font-weight: 200;">
+        <h3 style="font-weight: 200">
           Coleus blancoi Benth., commonly known as Mayana or Coleus, is a
           species of flowering plant belonging to the Family Lamiaceae. It is
           commonly found in areas with tropical climates, in which its native
@@ -335,7 +432,7 @@
 
       <div style="width: 50%">
         <h1 style="color: #4fba70; text-align: center">Oregano</h1>
-        <h3 style="font-weight: 200;">
+        <h3 style="font-weight: 200">
           Origanum vulgare L., commonly known as oregano belongs to the family
           ‘Lamiaceae’. It is a popular herb that has been naturalized in parts
           of the United States and Mexico and primarily grows to the hills of
@@ -370,7 +467,7 @@
 
       <div style="width: 50%">
         <h1 style="color: #4fba70; text-align: center">Tomato</h1>
-        <h3 style="font-weight: 200;">
+        <h3 style="font-weight: 200">
           Tomato (Solanum lycopersicum L.) is an economically important fruit
           crop that originated in Central America and western South America. It
           belongs to the Solanaceae family, also known as the potato or deadly
@@ -405,7 +502,7 @@
 
       <div style="width: 50%">
         <h1 style="color: #4fba70; text-align: center">Alugbati</h1>
-        <h3 style="font-weight: 200;">
+        <h3 style="font-weight: 200">
           Alugbati or Malabar Spinach (Basella alba L.) is an edible perennial
           vine that belongs to the Family Basellaceae. It is often found in
           tropical Asia, Africa, and Malaya, where it is largely cultivated as a
@@ -514,6 +611,89 @@
           </td>
         </tr>
       </table>
+    </div>
+
+    <div class="dichotomy" id="dichotomy">
+      <ol>
+        <li>
+          <ol type="A">
+            <li>
+              <h4>
+                Plants woody, either trees or shrubs, with perennating
+                structures borne on long-lived, above-ground
+                ………………………………………………………………………… Go to 2
+              </h4>
+            </li>
+            <li>
+              <h4>
+                Plants are herbaceous, herbs with perennating structures borne
+                below-ground as crowns, offsets, etc……………………………………………………………………
+                <span style="color: #81ce99" class="dichkey">Basella Alba</span>
+              </h4>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <ol type="A">
+            <li>
+              <h4>
+                Leaves are generally stiff ………………………………………………..<span
+                  style="color: #81ce99"
+                  class="dichkey"
+                  >Apium graveolens</span
+                >
+              </h4>
+            </li>
+            <h4>
+              <li>Leaves are generally not stiff ……………………………………………..Go to 3</li>
+            </h4>
+          </ol>
+        </li>
+
+        <li>
+          <ol type="A">
+            <li>
+              <h4>
+                Woody angiosperms with opposite, compound leaves ……………………….. Go
+                to 4
+              </h4>
+            </li>
+
+            <li>
+              <h4>
+                Woody angiosperm with leaves alternate; simple leaves ………………….
+                <span style="color: #81ce99" class="dichkey"
+                  >Solanum lycopersicum</span
+                >
+              </h4>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <ol type="A">
+            <li>
+              <h4>
+                Stamen ascending ………………………………………………………
+                <span style="color: #81ce99" class="dichkey"
+                  >Origanum vulgare</span
+                >
+              </h4>
+            </li>
+            <li>
+              <h4>
+                Declinate stamen ……………………………………………………...
+                <span style="color: #81ce99" class="dichkey"
+                  >Plectranthus scutellarioides</span
+                >
+              </h4>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <center>
+        <img src="./assets/bio/dichotomy.png" width="100%" height="100%" />
+      </center>
     </div>
 
     <div id="venn" style="line-height: 0">
