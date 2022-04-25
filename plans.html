@@ -246,7 +246,7 @@
     text-align: center;
   }
 
-  li {
+  .appmenu {
     background: transparent;
     color: #fff;
     display: block;
@@ -258,23 +258,23 @@
     width: 80px;
   }
 
-  li a {
+  .appmenu a {
     text-decoration: none;
     color: #fff7f1;
   }
 
-  li:hover,
-  li:focus-within {
+  .appmenu:hover,
+  .appmenu:focus-within {
     background: #93242a;
     color: #f74049;
     cursor: pointer;
   }
 
-  li:focus-within a {
+  .appmenu:focus-within a {
     outline: none;
   }
 
-  ul li ul {
+  ul .appmenu ul {
     background: #f74049;
     visibility: hidden;
     opacity: 0;
@@ -287,16 +287,16 @@
     width: 100%;
   }
 
-  ul li:hover > ul,
-  ul li:focus-within > ul,
-  ul li ul:hover,
-  ul li ul:focus {
+  ul .appmenu:hover > ul,
+  ul .appmenu:focus-within > ul,
+  ul .appmenu ul:hover,
+  ul .appmenu ul:focus {
     visibility: visible;
     opacity: 1;
     display: block;
   }
 
-  ul li ul li {
+  ul .appmenu ul .appmenu {
     clear: both;
   }
 </style>
@@ -318,15 +318,15 @@
       <span style="flex-grow: 1"></span>
       <nav role="navigation">
         <ul>
-          <li>
+          <li class="appmenu">
             <a href="./index.html">Home</a>
           </li>
-          <li><a href="./plans.html">Plans</a></li>
-          <li>
+          <li class="appmenu"><a href="./plans.html">Plans</a></li>
+          <li class="appmenu">
             <a href="#" aria-haspopup="true">Other</a>
             <ul class="dropdown" aria-label="submenu">
-              <li><a href="./bio.html">Biology</a></li>
-              <li><a href="./eapp.html">EAPP</a></li>
+              <li class="appmenu"><a href="./bio.html">Biology</a></li>
+              <li class="appmenu"><a href="./eapp.html">EAPP</a></li>
             </ul>
           </li>
         </ul>
